@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
 {
     if (argc < 2)
         return _print_error(NOT_ENOUGH_ARGS);
-    
+    //testing
     int err_msg;
 
     if(!strcmp(argv[1], "-help"))
