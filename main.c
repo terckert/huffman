@@ -11,6 +11,7 @@
 void _help();
 int _print_error();
 int _enough_param(int n);
+int _check_extension(const char *one, const char *two);
 
 int main(int argc, char const *argv[])
 {
@@ -23,13 +24,23 @@ int main(int argc, char const *argv[])
         _help();
     else if(!strcmp(argv[1], "-decode"))
     {
-        if(!_enough_param)
+        if(!_enough_param(argc))
             err_msg = NOT_ENOUGH_ARGS;
+        else if (!_check_extension(argv[3],argv[4]))
+            err_msg = INVALID_FILE_EXT;
+        else
+            printf("Decode test passed.");
 
     }
     else if(!strcmp(argv[1], "-encode"))
     {
-        
+        if(!_enough_param(argc))
+            err_msg = NOT_ENOUGH_ARGS;
+        else if (!_check_extension(argv[3],argv[4]))
+            err_msg = INVALID_FILE_EXT;
+        else
+            printf("Encode test passed.");
+            
     }
     else
         err_msg = INVALID_COMMAND;
@@ -67,5 +78,9 @@ int _print_error(int e)
 
 int _enough_param(int n)
 {
-    return(n >=2 && n <=5);
+    return(n == 5);
+}
+int _check_extension(const char *one, const char *two)
+{
+    return (strstr(one, ".txt") && strstr(two, ".txt"));   
 }

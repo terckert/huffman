@@ -3,12 +3,16 @@
 
 /**
  * @brief Encodes a given file. Provides the huffman en-
- * code key and encoded message to user.
+ * code key and encoded message to user. Returns 0 on
  * @param infile Filename containing initial messsage
  * @param code Huffman code based on characters in file
  * @param msg Encoded message
+ * @return 0 on success
  */
-void encode(char *infile, char *code, char *msg);
+
+
+
+int encode(char *infile, char *code, char *msg);
 
 /**
  * @brief Decodes a file using the provided code and saves
@@ -16,8 +20,9 @@ void encode(char *infile, char *code, char *msg);
  * @param code Name of the file containing the huffman code
  * @param msg Encoded message
  * @param outfile File to save the code into
+ * @return 0 on success
  */
-void decode(char *code, char *msg, char *outfile);
+int decode(char *code, char *msg, char *outfile);
 
 
 #endif /* HUFFMAN_H_ */

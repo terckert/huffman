@@ -12,10 +12,18 @@ struct HNODE
 
 typedef struct hNode node;
 
-void encode(char *infile, char *code, char *msg);
+node *root;
+
+int encode(char *infile, char *code, char *msg)
+{
+    return 0;
+}
 
 
-void decode(char *outfile, char *code, char *msg);
+int decode(char *outfile, char *code, char *msg)
+{
+    return 0;
+}
 
 
 void 
