@@ -28,6 +28,8 @@ node* create_node(char c, int cnt, bool tr)
     return temp;
 }
 
+
+
 /* PRIVATE MEMBERS */
 node *root;
 

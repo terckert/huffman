@@ -1,1 +1,5 @@
 /huffman
+huffman
+huffman.o
+.gitignore
+main.o
