@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 
-//#include "huffman.h"
+#include "huffman.h"
 
 #define SUCCESS 0
 #define NOT_ENOUGH_ARGS 1
 #define INVALID_COMMAND 2
 #define INVALID_FILE_EXT 3
+#define UNABLE_TO_OPEN_FILE 4
 
 void _help();
 int _print_error();
@@ -17,7 +18,7 @@ int main(int argc, char const *argv[])
 {
     if (argc < 2)
         return _print_error(NOT_ENOUGH_ARGS);
-    //testing
+
     int err_msg;
 
     if(!strcmp(argv[1], "-help"))
@@ -47,7 +48,7 @@ int main(int argc, char const *argv[])
     
     if(err_msg)
         return _print_error(err_msg);
-
+        
     return SUCCESS;
 }
 

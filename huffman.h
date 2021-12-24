@@ -1,6 +1,10 @@
 #ifndef HUFFMAN_H_
 #define HUFFMAN_H_
 
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
 /**
  * @brief Encodes a given file. Provides the huffman en-
  * code key and encoded message to user. Returns 0 on
@@ -8,10 +12,8 @@
  * @param code Huffman code based on characters in file
  * @param msg Encoded message
  * @return 0 on success
+ * @return 4 on failure, could not open file
  */
-
-
-
 int encode(char *infile, char *code, char *msg);
 
 /**
