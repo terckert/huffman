@@ -40,7 +40,7 @@ int main(int argc, char const *argv[])
         else if (!_check_extension(argv[3],argv[4]))
             err_msg = INVALID_FILE_EXT;
         else
-            printf("Encode test passed.");
+            encode(argv[2], argv[3], argv[4]);
             
     }
     else

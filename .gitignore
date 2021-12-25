@@ -3,3 +3,6 @@ huffman
 huffman.o
 .gitignore
 main.o
+*.txt
+.vscode/launch.json
+.vscode/*

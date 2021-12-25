@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * @brief Encodes a given file. Provides the huffman en-
@@ -14,7 +15,7 @@
  * @return 0 on success
  * @return 4 on failure, could not open file
  */
-int encode(char *infile, char *code, char *msg);
+int encode(const char *infile, const char *code, const char *msg);
 
 /**
  * @brief Decodes a file using the provided code and saves
@@ -24,7 +25,7 @@ int encode(char *infile, char *code, char *msg);
  * @param outfile File to save the code into
  * @return 0 on success
  */
-int decode(char *code, char *msg, char *outfile);
+int decode(const char *code, const char *msg, const char *outfile);
 
 
 #endif /* HUFFMAN_H_ */
